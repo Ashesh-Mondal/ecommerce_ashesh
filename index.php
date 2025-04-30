@@ -79,7 +79,9 @@ include "./admin/inc/db.php";
                     <div class="detail-box">
                       <h2>
                         Welcome To Our <br>
-                        Gift Shop <?php echo $_SESSION['uname'] ?>
+                        Gift Shop <?php if (!empty($_SESSION['uid'])) {
+                                    echo $_SESSION['uname'];
+                                  } ?>
                       </h2>
                       <p>
                         Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit. Nostrum fugit doloribus consequatur distinctio esse, possimus maiores aliquid repellat beatae cum, perspiciatis enim, accusantium perferendis.
